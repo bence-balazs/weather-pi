@@ -11,5 +11,5 @@ def main():
 
     cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM leads")
+    cursor.execute("SELECT * FROM leads;")
     print(cursor.fetchall())
