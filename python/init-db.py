@@ -18,6 +18,7 @@ def main():
 
     # Table create command
     sql ='''CREATE TABLE cpu_temp(
+        id SERIAL PRIMARY KEY,
         time TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         temp REAL
         )
