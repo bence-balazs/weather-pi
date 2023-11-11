@@ -13,3 +13,6 @@ def main():
 
     cursor.execute("SELECT * FROM leads;")
     print(cursor.fetchall())
+
+if __name__ == "__main__":
+    main()
