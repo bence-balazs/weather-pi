@@ -11,12 +11,14 @@ def main():
 
     cursor = conn.cursor()
 
+    # Set database timezone to CET
+    cursor.execute("SET timezone = 'CET';")
     # Drop the table if already exists
     cursor.execute("DROP TABLE IF EXISTS cpu_temp")
 
     # Table create command
     sql ='''CREATE TABLE cpu_temp(
-        created_on TIMESTAMP NOT NULL DEFAULT NOW(),
+        time TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         temp REAL
         )
         '''

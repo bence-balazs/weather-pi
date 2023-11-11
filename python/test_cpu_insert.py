@@ -1,4 +1,6 @@
 import psycopg2
+import datetime
+from datetime import timezone
 
 def main():
     conn = psycopg2.connect(
