@@ -16,6 +16,7 @@ def main():
     formatted_value = format(cpu.temperature, '.1f')
     cursor = conn.cursor()
 
+    # SQL command to run
     sql ='''INSERT INTO cpu_temp (temp) VALUES (%s)''' % formatted_value
     
     # Execute the insert
