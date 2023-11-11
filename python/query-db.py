@@ -3,7 +3,7 @@ import psycopg2
 def main():
     conn = psycopg2.connect(
             database="rpi",
-            host="pg-db",
+            host="localhost",
             user="rpi",
             password="alma",
             port="5432",
