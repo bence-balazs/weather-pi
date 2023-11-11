@@ -11,7 +11,7 @@ def main():
 
     cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM cpu_temp;")
+    cursor.execute("SELECT time at time zone 'Europe/Budapest', temp FROM cpu_temp;")
     print(cursor.fetchall())
 
 
